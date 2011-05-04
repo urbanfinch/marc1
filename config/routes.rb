@@ -1,4 +1,44 @@
 Marc::Application.routes.draw do
+  
+  get "categories/index"
+
+  get "categories/show"
+
+  get "categories/create"
+
+  get "categories/destroy"
+
+  get "categories/update"
+
+  get "products/index"
+
+  get "products/show"
+
+  get "products/create"
+
+  get "products/destroy"
+
+  get "products/update"
+
+  match 'home' => 'home#index'
+  match 'about' => 'about#index'
+  match 'how' => 'how#index'
+  match 'careers' => 'careers#index'
+  match 'contact' => 'contact#index'
+  match 'retail' => 'retail#index'
+  match 'search' => 'search#index'
+  
+  resources :categories, :only => [:index, :show] do
+    resources :products, :only => [:index, :show]
+  end
+  
+  namespace :admin do
+    resources :products, :categories
+    root :to => 'products#index'
+  end
+  
+  root :to => "home#index"
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

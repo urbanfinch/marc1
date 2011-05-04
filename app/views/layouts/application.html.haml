@@ -1,0 +1,15 @@
+!!!5
+%html
+  %head
+    = stylesheet_link_tag 'screen.css', :media => 'screen, projection'
+    = stylesheet_link_tag 'print.css', :media => 'print'
+    /[if IE]
+      = stylesheet_link_tag 'ie.css', :media => 'screen, projection'
+    = javascript_include_tag 'jquery/jquery.min'
+    = javascript_include_tag 'rails'
+    = javascript_include_tag 'application'
+    = csrf_meta_tag
+    %title MARC
+  %body
+    .container
+      = yield
