@@ -1,6 +1,6 @@
 %div{:id => 'products'}
   .third
-    %img{:id => 'products', :src => "#{@products.first.image}", :alt => 'MARC Products'}
+    %img{:id => 'products', :src => "#{@products.first.image unless @products.empty?}", :alt => 'MARC Products'}
   .two_third
     %ul{:class => 'breadcrumb'}
       %li
@@ -10,7 +10,7 @@
         %a{:href => '/categories'} Product Categories
       %li >>
       %li
-        %a{:href => "/categories/#{params[:category_id]}/products"}= @category.title
+        %a{:href => "/categories/#{params[:category_id]}/products"}= @category.title unless @category.nil?
     %h2 Products
     %ul{:id => 'products'}
       - @products.each do |product|
