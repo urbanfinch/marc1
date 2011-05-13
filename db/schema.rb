@@ -27,10 +27,15 @@ ActiveRecord::Schema.define(:version => 20110504200658) do
     t.string   "title"
     t.string   "description"
     t.string   "sku"
+    t.string   "sizes"
     t.string   "image_file_name"
     t.integer  "image_file_size"
     t.string   "image_content_type"
     t.datetime "image_updated_at"
+    t.string   "data_file_name"
+    t.integer  "data_file_size"
+    t.string   "data_content_type"
+    t.datetime "data_updated_at"
     t.string   "msds_file_name"
     t.integer  "msds_file_size"
     t.string   "msds_content_type"
@@ -39,7 +44,7 @@ ActiveRecord::Schema.define(:version => 20110504200658) do
     t.integer  "label_file_size"
     t.string   "label_content_type"
     t.datetime "label_updated_at"
-    t.boolean  "active"
+    t.boolean  "active",             :default => true, :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -48,7 +53,7 @@ ActiveRecord::Schema.define(:version => 20110504200658) do
     t.string   "email"
     t.string   "password_hash"
     t.string   "password_salt"
-    t.boolean  "active"
+    t.boolean  "active",        :default => true, :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

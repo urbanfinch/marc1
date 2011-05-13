@@ -1,6 +1,6 @@
 %div{:id => 'products'}
   .third
-    %img{:id => 'products', :src => '#', :alt => 'MARC Products'}
+    %img{:id => 'products', :src => "#{@products.first.image}", :alt => 'MARC Products'}
   .two_third
     %ul{:class => 'breadcrumb'}
       %li
@@ -10,19 +10,10 @@
         %a{:href => '/categories'} Product Categories
       %li >>
       %li
-        %a{:href => '/categories/1/products'} Products
+        %a{:href => "/categories/#{params[:category_id]}/products"}= @category.title
     %h2 Products
     %ul{:id => 'products'}
-      %li
-        %a{:href => '#'} Lorem Ipsum…
-      %li
-        %a{:href => '#'} Lorem Ipsum…
-      %li
-        %a{:href => '#'} Lorem Ipsum…
-      %li
-        %a{:href => '#'} Lorem Ipsum…
-      %li
-        %a{:href => '#'} Lorem Ipsum…
-      %li
-        %a{:href => '#'} Lorem Ipsum…
+      - @products.each do |product|
+        %li
+          %a{:href => "/categories/#{params[:category_id]}/products/#{product.id}"}= product.title
   .clear

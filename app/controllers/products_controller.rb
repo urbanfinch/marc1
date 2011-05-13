@@ -1,10 +1,12 @@
 class ProductsController < ApplicationController
   
   def index
-    render
+    @category = Category.find(params[:category_id])
+    @products = @category.products
   end
   
   def show
-    render
+    @category = Category.find(params[:category_id])
+    @product = Product.find(params[:id])
   end
 end

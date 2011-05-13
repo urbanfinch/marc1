@@ -17,10 +17,10 @@
       .container
         %h1{:id => 'logo'}
           %a{:href => '/'} MARC
-        %form{:id => 'search', :action => '/search', :method => 'get'}
+        = form_for @search, :url => search_path, :html => {:id => 'search', :method => :get} do |f|
           %p
-            %label{:for => 'search'} Product Search
-            %input{:id => 'search', :name => 'search', :type => 'text', :placeholder => 'Search by product title, ID, etc…'}
+            = f.label :title_or_description_or_sku_contains, "Product Search"
+            = f.text_field :title_or_description_or_sku_contains, :placeholder => 'Search by product title, ID, etc…'
         %nav
           %ul
             %li
