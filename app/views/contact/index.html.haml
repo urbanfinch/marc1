@@ -1,1 +1,33 @@
-%h1 Contact
+%div{:id => 'contact'}
+  .half
+    %h2 Do You Have Questions About MARC Or Our Products?
+    %p Please fill out the form on this page to contact us and we will be happy to answer any questions you have!
+    %p
+      Or you can call us at 
+      %span{:class => 'phone'} 555-555-5555
+    %h2 Interested In A Career At MARC?
+    %p 
+      Find out more on our 
+      %a{:href => '/careers'} career opportunities 
+      page!
+  .half
+    %form{:id => 'contact', :action => '/contact', :method => 'post'}
+      %p
+        %label{:for => 'name'} Name
+        %input{:id => 'name', :name => 'name', :type => 'text'}
+      %p
+        %label{:for => 'organization'} Organization (If applicable)
+        %input{:id => 'organization', :name => 'organization', :type => 'text'}
+      %p
+        %span
+          %label{:for => 'email'} Email
+          %input{:id => 'email', :name => 'email', :type => 'text'}
+        %span
+          %label{:for => 'phone'} Phone
+          %input{:id => 'phone', :name => 'phone', :type => 'text'}
+      %p
+        %label{:for => 'message'} Message
+        %textarea{:id => 'message', :name => 'message', :cols => 50, :rows => 3}
+      %p
+        %input{:id => 'send', :name => 'send', :type => 'submit', :value => 'Send'}
+  .clear

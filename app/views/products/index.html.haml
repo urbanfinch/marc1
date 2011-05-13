@@ -1,1 +1,28 @@
-%h1 Products
+%div{:id => 'products'}
+  .third
+    %img{:id => 'products', :src => '#', :alt => 'MARC Products'}
+  .two_third
+    %ul{:class => 'breadcrumb'}
+      %li
+        %a{:href => '/'} MARC
+      %li >>
+      %li
+        %a{:href => '/categories'} Product Categories
+      %li >>
+      %li
+        %a{:href => '/categories/1/products'} Products
+    %h2 Products
+    %ul{:id => 'products'}
+      %li
+        %a{:href => '#'} Lorem Ipsum…
+      %li
+        %a{:href => '#'} Lorem Ipsum…
+      %li
+        %a{:href => '#'} Lorem Ipsum…
+      %li
+        %a{:href => '#'} Lorem Ipsum…
+      %li
+        %a{:href => '#'} Lorem Ipsum…
+      %li
+        %a{:href => '#'} Lorem Ipsum…
+  .clear

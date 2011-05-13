@@ -1,1 +1,19 @@
-%h1 How To...
+%div{:id => 'how'}
+  .third
+    %img{:id => 'how', :src => '#', :alt => 'MARC How To'}
+  .two_third
+    %ul{:class => 'breadcrumb'}
+      %li
+        %a{:href => '/'} MARC
+      %li >>
+      %li
+        %a{:href => '/how'} How To…
+    %h2 How To…
+    %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus dui nec urna consequat sed pharetra eros commodo. Donec pharetra fermentum varius. In diam turpis, fermentum id semper vel, fermentum id nisi. Vestibulum tristique risus in elit semper feugiat. Etiam vel metus neque. Mauris nunc nunc, aliquam at sodales ut, rutrum quis purus. Duis et eros nisl, sit amet posuere lacus. Nunc non sollicitudin ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fringilla, ligula non faucibus tristique, nisi tortor faucibus lorem, sit amet accumsan sem massa nec neque. Suspendisse potenti. Aliquam eleifend mattis nunc tincidunt aliquam. Vivamus eros dolor, aliquet eget tincidunt non, tempor vel nisi. Morbi tincidunt, odio sit amet porttitor posuere, tortor justo convallis quam, nec mattis tellus enim sed odio.
+    %p
+      %a{:href => '#', :class => 'article'} Link 1…
+    %p
+      %a{:href => '#', :class => 'article'} Link 2…
+    %p
+      %a{:href => '#', :class => 'article'} Link 3…
+  .clear

@@ -5,11 +5,41 @@
     = stylesheet_link_tag 'print.css', :media => 'print'
     /[if IE]
       = stylesheet_link_tag 'ie.css', :media => 'screen, projection'
-    = javascript_include_tag 'jquery/jquery.min'
+    /[if IE]
+      = javascript_include_tag 'http://html5shim.googlecode.com/svn/trunk/html5.js'
+    = javascript_include_tag 'jquery.min'
     = javascript_include_tag 'rails'
     = javascript_include_tag 'application'
     = csrf_meta_tag
     %title MARC
   %body
-    .container
-      = yield
+    %header
+      .container
+        %h1{:id => 'logo'}
+          %a{:href => '/'} MARC
+        %form{:id => 'search', :action => '/search', :method => 'get'}
+          %p
+            %label{:for => 'search'} Product Search
+            %input{:id => 'search', :name => 'search', :type => 'text', :placeholder => 'Search by product title, ID, etc…'}
+        %nav
+          %ul
+            %li
+              %a{:href => '/home', :class => "#{'selected' if current_page?(:controller => 'home', :action => 'index')}"} Home
+            %li
+              %a{:href => '/categories', :class => "#{'selected' if current_controller?('categories') || current_controller?('products')}"} Products
+            %li
+              %a{:href => '/about', :class => "#{'selected' if current_page?(:controller => 'about', :action => 'index')}"} About Us
+            %li
+              %a{:href => '/how', :class => "#{'selected' if current_page?(:controller => 'how', :action => 'index')}"} How To
+            %li
+              %a{:href => '/careers', :class => "#{'selected' if current_page?(:controller => 'careers', :action => 'index')}"} Careers
+            %li
+              %a{:href => '/contact', :class => "#{'selected' if current_page?(:controller => 'contact', :action => 'index')}"} Contact
+        %hr
+    %section
+      .container
+        = yield
+    %footer
+      .container
+        %p{:id => 'copyright'} Lorem ipsum dolor sit amet, consectetur adipiscing elit. | Sed dapibus dui nec urna consequat sed. | Donec pharetra fermentum varius. In diam turpis, | Donec pharetra fermentum varius.
+        %p{:id => 'legal'} Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus dui nec urna consequat sed pharetra eros commodo. Donec pharetra fermentum varius. In diam turpis, fermentum id semper vel, fermentum id nisi. Vestibulum tristique risus in elit semper feugiat. Etiam vel metus neque. Mauris nunc nunc, aliquam at sodales ut, rutrum quis purus. Duis et eros nisl, sit amet posuere lacus. Nunc non sollicitudin ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fringilla, ligula non faucibus tristique, nisi tortor faucibus lorem, sit amet accumsan sem massa nec neque. Suspendisse potenti. Aliquam eleifend mattis nunc tincidunt aliquam. Vivamus eros dolor, aliquet eget tincidunt non, tempor vel nisi. Morbi tincidunt, odio sit amet porttitor posuere, tortor justo convallis quam, nec mattis tellus enim sed odio.

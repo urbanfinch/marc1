@@ -1,0 +1,33 @@
+div#contact
+  .half:first-child
+    width: 460px
+    padding-right: 20px
+    
+  span.phone
+    color: $blue
+    
+  form#contact
+    padding: 10px
+    background-color: $gray
+    @include border-radius(10px)
+    @include linear-gradient(color-stops($gray, $gray * .85))
+    @include text-shadow($white * .88)
+    
+    p
+      input[type=text],
+      textarea
+        width: 445px
+        max-width: 445px
+      
+      &:last-child
+        margin-bottom: 0px
+        
+      textarea
+        height: 120px
+        
+      span
+        input[type=text]
+          width: 210px
+          
+        &:first-child
+          margin-right: 10px

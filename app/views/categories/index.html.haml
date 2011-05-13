@@ -1,1 +1,30 @@
-%h1 Categories
+%div{:id => 'categories'}
+  .third
+    %img{:id => 'categories', :src => '#', :alt => 'MARC Categories'}
+  .two_third
+    %ul{:class => 'breadcrumb'}
+      %li
+        %a{:href => '/'} MARC
+      %li >>
+      %li
+        %a{:href => '/categories'} Product Categories
+    %h2 Product Categories
+    %ul{:id => 'categories'}
+      %li
+        %a{:href => '#'} Lorem Ipsum…
+      %li
+        %a{:href => '#'} Lorem Ipsum…
+      %li
+        %a{:href => '#'} Lorem Ipsum…
+      %li
+        %a{:href => '#'} Lorem Ipsum…
+      %li
+        %a{:href => '#'} Lorem Ipsum…
+      %li
+        %a{:href => '#'} Lorem Ipsum…
+    %h2 Looking For Our Retail Products?
+    %p 
+      Visit our 
+      %a{:href => '/retail'} retail products 
+      page for more information!
+  .clear

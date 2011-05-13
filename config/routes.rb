@@ -1,25 +1,5 @@
 Marc::Application.routes.draw do
   
-  get "categories/index"
-
-  get "categories/show"
-
-  get "categories/create"
-
-  get "categories/destroy"
-
-  get "categories/update"
-
-  get "products/index"
-
-  get "products/show"
-
-  get "products/create"
-
-  get "products/destroy"
-
-  get "products/update"
-
   match 'home' => 'home#index'
   match 'about' => 'about#index'
   match 'how' => 'how#index'
@@ -28,7 +8,7 @@ Marc::Application.routes.draw do
   match 'retail' => 'retail#index'
   match 'search' => 'search#index'
   
-  resources :categories, :only => [:index, :show] do
+  resources :categories, :only => [:index] do
     resources :products, :only => [:index, :show]
   end
   
