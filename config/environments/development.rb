@@ -25,3 +25,5 @@ Marc::Application.configure do
 end
 
 Paperclip.options[:command_path] = "/usr/local/bin/"
+
+PAPERCLIP_STORAGE_OPTIONS = {}

@@ -14,6 +14,10 @@ gem 'meta_search'
 gem 'will_paginate', '~> 3.0.pre2'
 gem 'paperclip'
 
+group :production do
+  gem 'aws-s3'
+end
+
 group :development, :test do
   gem 'cucumber'
   gem 'cucumber-rails'
