@@ -47,12 +47,3 @@ Marc::Application.configure do
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
 end
-
-PAPERCLIP_STORAGE_OPTIONS = {
-  :storage => :s3,
-  :bucket => 'marc1',
-  :s3_credentials => {
-    :access_key_id => ENV['S3_KEY'],
-    :secret_access_key => ENV['S3_SECRET']
-  }
-}

@@ -4,7 +4,8 @@ Marc::Application.routes.draw do
   match 'about' => 'about#index'
   match 'how' => 'how#index'
   match 'careers' => 'careers#index'
-  match 'contact' => 'contact#index'
+  get 'contact' => 'contact#index'
+  post 'contact' => 'contact#create', :as => 'new_contact'
   match 'retail' => 'retail#index'
   match 'search' => 'search#index'
   

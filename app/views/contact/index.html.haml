@@ -7,27 +7,36 @@
       %span{:class => 'phone'} 555-555-5555
     %h2 Interested In A Career At MARC?
     %p 
-      Find out more on our 
+      Find out more on our
       %a{:href => '/careers'} career opportunities 
       page!
   .half
-    %form{:id => 'contact', :action => '/contact', :method => 'post'}
-      %p
-        %label{:for => 'name'} Name
-        %input{:id => 'name', :name => 'name', :type => 'text'}
-      %p
-        %label{:for => 'organization'} Organization (If applicable)
-        %input{:id => 'organization', :name => 'organization', :type => 'text'}
-      %p
-        %span
-          %label{:for => 'email'} Email
-          %input{:id => 'email', :name => 'email', :type => 'text'}
-        %span
-          %label{:for => 'phone'} Phone
-          %input{:id => 'phone', :name => 'phone', :type => 'text'}
-      %p
-        %label{:for => 'message'} Message
-        %textarea{:id => 'message', :name => 'message', :cols => 50, :rows => 3}
-      %p
-        %input{:id => 'send', :name => 'send', :type => 'submit', :value => 'Send'}
+    = form_for :contact, :url => new_contact_path, :html => {:id => 'contact'} do |f|
+      - if flash[:notice]
+        %div{:id => 'flash'}= flash[:notice]
+      - if @contact.errors.any?
+        %div{:id => 'errors'}
+          %p There was an error sending the message:
+          %ul
+            - @contact.errors.full_messages.each do |message|
+              %li= message
+      %ul
+        %li
+          = f.label :name
+          = f.text_field :name
+        %li
+          = f.label :organization, "Organization (If applicable)"
+          = f.text_field :organization
+        %li
+          %span
+            = f.label :email
+            = f.text_field :email
+          %span
+            = f.label :phone
+            = f.text_field :phone
+        %li
+          = f.label :message
+          = f.text_area :message, :cols => 50, :rows => 3
+        %li
+          = f.submit :send, :value => "Send"
   .clear
