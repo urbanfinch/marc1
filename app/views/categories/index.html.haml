@@ -1,6 +1,6 @@
 %div{:id => 'categories'}
   .third
-    %img{:id => 'categories', :src => "#{@categories.first.image unless @categories.empty?}", :alt => 'MARC Categories'}
+    %img{:id => 'categories', :src => "#{@categories[rand(@categories.size)].image(:medium) unless @categories.empty?}", :alt => 'MARC Categories'}
   .two_third
     %ul{:class => 'breadcrumb'}
       %li
@@ -12,7 +12,7 @@
     %ul{:id => 'categories'}
       - @categories.each do |category|
         %li
-          %a{:href => "/categories/#{category.id}/products"}= category.title
+          %a{:href => "/categories/#{category.id}/products", :'data-image-url' => category.image(:medium)}= category.title
     %h2 Looking For Our Retail Products?
     %p 
       Visit our 

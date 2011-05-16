@@ -1,0 +1,51 @@
+ul#user
+  position: absolute
+  top: 0px
+  right: 0px
+  padding: 10px
+  background-color: $gray
+  @include border-radius(10px)
+  @include linear-gradient(color-stops($gray, $gray * .85))
+  @include text-shadow($white * .88)
+  
+  li
+    display: inline
+    font-size: 14px
+    font-weight: bold
+
+div#login
+  form#login
+    width: 320px
+    margin: 0px auto
+  
+    input[type=text],
+    input[type=password]
+      width: 305px
+     
+div#products,
+div#categories
+  p#create
+    height: 60px
+    margin-bottom: 20px
+    
+    a.call_to_action
+      float: right
+      display: block
+      
+  p.back
+    font-weight: bold
+    
+    &:last-child
+      margin-bottom: 0px
+      
+  form.new_product,
+  form.edit_product,
+  form.new_category,
+  form.edit_category
+    width: 480px
+    margin-bottom: 10px
+    
+    input[type=text],
+    input[type=file],
+    textarea
+      width: 465px

@@ -14,11 +14,17 @@ Marc::Application.routes.draw do
   end
   
   namespace :admin do
-    resources :products, :categories
+    resources :products, :except => [:show]
+    resources :categories, :except => [:show]
+    resources :sessions, :except => [:index, :show, :update]
+    get 'login' => 'sessions#new', :as => 'login'
+    post 'login' => 'sessions#create'
+    get 'logout' => 'sessions#destroy', :as => 'logout'
     root :to => 'products#index'
   end
   
   root :to => "home#index"
+  match '*path', :to => redirect('/')
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

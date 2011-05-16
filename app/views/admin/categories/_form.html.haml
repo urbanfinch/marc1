@@ -1,0 +1,22 @@
+= form_for [:admin, @category], :html => { :multipart => true } do |f|
+  - if flash[:notice]
+    %div{:id => 'flash'}= flash[:notice]
+  - if @category.errors.any?
+    %div{:id => 'errors'}
+      %p There was an error:
+      %ul
+        - @category.errors.full_messages.each do |message|
+          %li= message
+  %ul
+    %li
+      = f.label :title
+      = f.text_field :title
+    %li
+      = f.label :image
+      = f.file_field :image
+      %div{:class => 'image'}
+        - unless @category.id.nil?
+          %a{:href => @category.image.url}
+            %img{:src => @category.image(:thumb)}
+    %li
+      = f.submit :save, :value => 'Save'

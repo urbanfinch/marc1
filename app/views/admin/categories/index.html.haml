@@ -1,2 +1,17 @@
-%h1 Admin::Categories#index
-%p Find me in app/views/admin/categories/index.html.haml
+%div{:id => 'categories'}
+  %p{:id => 'create'}
+    = link_to "Create A New Category", new_admin_category_path, :class => 'call_to_action'
+  %table
+    %thead
+      %tr
+        %th Title
+        %th Edit
+        %th Delete
+    %tbody
+      - @categories.each do |category|
+        %tr
+          %td= category.title
+          %td
+            = link_to "Edit", edit_admin_category_path(category)
+          %td
+            = link_to "Delete", [:admin, category], :method => :delete

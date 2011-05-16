@@ -1,0 +1,11 @@
+%div{:id => 'login'}
+  = form_tag admin_login_path, :id => 'login' do
+    %ul
+      %li
+        = label_tag :email
+        = text_field_tag :email, params[:email]
+      %li
+        = label_tag :password
+        = password_field_tag :password
+      %li
+        = submit_tag :login, :value => 'Login'

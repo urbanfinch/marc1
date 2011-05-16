@@ -7,12 +7,6 @@ div#contact
     color: $blue
     
   form#contact
-    padding: 10px
-    background-color: $gray
-    @include border-radius(10px)
-    @include linear-gradient(color-stops($gray, $gray * .85))
-    @include text-shadow($white * .88)
-    
     ul
       > li
         input[type=text],
@@ -35,25 +29,4 @@ div#contact
           
           &:first-child
             margin-right: 10px
-            
-        div.field_with_errors
-          input[type=text],
-          textarea
-            border: 1px $blue solid
-    
-    div#flash,
-    div#errors
-      margin-bottom: 10px
-      padding: 10px
-      background-color: $gray * 1.1
-      @include border-radius(10px)
-      
-      p
-        font-weight: bold
-        
-      ul
-        li
-          margin-bottom: 5px
-          list-style-position: inside
-          list-style-type: square
         

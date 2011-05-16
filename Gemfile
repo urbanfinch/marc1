@@ -14,6 +14,7 @@ gem 'meta_search'
 gem 'will_paginate', '~> 3.0.pre2'
 gem 'paperclip'
 gem 'postageapp'
+gem 'bcrypt-ruby', :require => 'bcrypt'
 
 group :production do
   gem 'aws-s3'

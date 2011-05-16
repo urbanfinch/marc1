@@ -33,6 +33,7 @@ GEM
       builder
       mime-types
       xml-simple
+    bcrypt-ruby (2.1.4)
     builder (2.1.2)
     capybara (0.4.1.2)
       celerity (>= 0.7.9)
@@ -156,6 +157,7 @@ PLATFORMS
 
 DEPENDENCIES
   aws-s3
+  bcrypt-ruby
   capybara
   compass
   cucumber

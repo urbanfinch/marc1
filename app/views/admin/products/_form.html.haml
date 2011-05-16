@@ -1,0 +1,52 @@
+= form_for [:admin, @product], :html => { :multipart => true } do |f|
+  - if flash[:notice]
+    %div{:id => 'flash'}= flash[:notice]
+  - if @product.errors.any?
+    %div{:id => 'errors'}
+      %p There was an error:
+      %ul
+        - @product.errors.full_messages.each do |message|
+          %li= message
+  %ul
+    %li
+      = f.label :title
+      = f.text_field :title
+    %li
+      = f.label :sku
+      = f.text_field :sku
+    %li
+      = f.label :description
+      = f.text_area :description, :cols => 50, :rows => 5
+    %li
+      = f.label :sizes
+      = f.text_field :sizes
+    %li
+      = f.label :category_id
+      = f.collection_select :category_id, Category.all, :id, :title
+    %li
+      = f.label :image
+      = f.file_field :image
+      %div{:class => 'image'}
+        - unless @product.id.nil?
+          %a{:href => @product.image.url}
+            %img{:src => @product.image(:thumb)}
+    %li
+      = f.label :data, "Data Sheet"
+      = f.file_field :data
+      - unless @product.id.nil?
+        = link_to @product.data, @product.data.url
+    %li
+      = f.label :msds, "MSDS Sheet"
+      = f.file_field :msds
+      - unless @product.id.nil?
+        = link_to @product.msds, @product.msds.url
+    %li
+      = f.label :label, "Sample Label"
+      = f.file_field :label
+      - unless @product.id.nil?
+        = link_to @product.label, @product.label.url
+    %li
+      = f.label :active
+      = f.check_box :active
+    %li
+      = f.submit :save, :value => 'Save'

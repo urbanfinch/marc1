@@ -1,2 +1,21 @@
-%h1 Admin::Products#index
-%p Find me in app/views/admin/products/index.html.haml
+%div{:id => 'products'}
+  %p{:id => 'create'}
+    = link_to "Create A New Product", new_admin_product_path, :class => 'call_to_action'
+  %table
+    %thead
+      %tr
+        %th SKU
+        %th Title
+        %th Description
+        %th Edit
+        %th Delete
+    %tbody
+      - @products.each do |product|
+        %tr
+          %td= product.sku
+          %td= product.title
+          %td= product.description.truncate(50) unless product.description.nil?
+          %td
+            = link_to "Edit", edit_admin_product_path(product)
+          %td
+            = link_to "Delete", [:admin, product], :method => :delete
