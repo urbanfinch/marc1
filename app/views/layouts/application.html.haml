@@ -11,6 +11,14 @@
     = javascript_include_tag 'jquery.min'
     = javascript_include_tag 'rails'
     = javascript_include_tag 'application'
+    = javascript_include_tag 'marc'
+    :javascript
+      /* Initiate the application javascript and run */
+      $(document).ready(function(){
+
+        marc.run();
+
+      });
     = csrf_meta_tag
     %title MARC
   %body
