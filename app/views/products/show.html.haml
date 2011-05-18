@@ -1,6 +1,6 @@
 %div{:id => 'product'}
   .third
-    %img{:class => 'product', :src => "#{@product.image}", :alt => 'MARC Product'}
+    %img{:class => 'product', :src => "#{@product.image.path.nil? ? '/images/missing.png' : @product.image}", :alt => 'MARC Product'}
   .two_third
     %ul{:class => 'breadcrumb'}
       %li
