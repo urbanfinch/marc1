@@ -9,7 +9,7 @@
       %li
         %a{:href => '/categories'} Product Categories
     %h2 Product Categories
-    %ul{:id => 'categories'}
+    %ul{:class => 'categories'}
       - @categories.each do |category|
         %li
           %a{:href => "/categories/#{category.id}/products", :'data-image-url' => category.image(:medium)}= category.title
