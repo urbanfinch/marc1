@@ -15,7 +15,7 @@
       %a{:href => '/careers'} career opportunities 
       page!
   .half
-    = form_for :contact, :url => new_contact_path, :html => {:id => 'contact'} do |f|
+    = form_for :contact, :url => new_contact_path, :html => {:class => 'contact'} do |f|
       - if flash[:notice]
         %div{:id => 'flash'}= flash[:notice]
       - if @contact.errors.any?
