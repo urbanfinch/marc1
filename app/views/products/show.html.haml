@@ -19,10 +19,13 @@
     %p= @product.description
     %p= @product.sizes
     %ul{:id => 'brochures'}
-      %li
-        %a{:href => "#{@product.data}", :class => 'call_to_action'} Data Sheet
-      %li
-        %a{:href => "#{@product.msds}", :class => 'call_to_action'} MSDS Sheet
-      %li
-        %a{:href => "#{@product.label}", :class => 'call_to_action'} Sample Label
+      - unless @product.data.path.nil?
+        %li
+          %a{:href => "#{@product.data}", :class => 'call_to_action'} Data Sheet
+      - unless @product.msds.path.nil?
+        %li
+          %a{:href => "#{@product.msds}", :class => 'call_to_action'} MSDS Sheet
+      - unless @product.label.path.nil?
+        %li
+          %a{:href => "#{@product.label}", :class => 'call_to_action'} Sample Label
   .clear
