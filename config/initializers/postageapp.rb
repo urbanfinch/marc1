@@ -1,3 +1,3 @@
 PostageApp.configure do |config|
-  config.api_key = 'Yx2nPe7CFZmn5pLN8HLj0Gctrmamn9jHs'
+  config.api_key = ENV['POSTAGEAPP_API_KEY']
 end
