@@ -6,4 +6,28 @@ class Product < ActiveRecord::Base
   has_attached_file       :label, { :default_url => '/documents/missing.pdf' }.merge(PAPERCLIP_STORAGE_OPTIONS)
   
   belongs_to :category
+  
+  after_initialize          :_default
+  before_save               :_update_featured
+  
+  def featured?
+    self.featured
+  end
+  
+  def active?
+    self.active
+  end
+  
+  private
+  
+  def _default
+    self.featured ||= false if new_record?
+    self.active   ||= true if new_record?
+  end
+  
+  def _update_featured
+    if self.featured?
+      Product.update_all ["featured = ?", false]
+    end
+  end
 end

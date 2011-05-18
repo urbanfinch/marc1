@@ -46,6 +46,9 @@
       - unless @product.id.nil?
         = link_to @product.label, @product.label.url
     %li
+      = f.label :featured
+      = f.check_box :featured
+    %li
       = f.label :active
       = f.check_box :active
     %li

@@ -8,5 +8,6 @@ Factory.define :product do |f|
   f.data File.open("spec/support/files/document.pdf")
   f.msds File.open("spec/support/files/document.pdf")
   f.label File.open("spec/support/files/document.pdf")
+  f.featured false
   f.active true
 end

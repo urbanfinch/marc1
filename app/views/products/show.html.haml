@@ -21,7 +21,7 @@
     %ul{:id => 'brochures'}
       - unless @product.data.path.nil?
         %li
-          %a{:href => "#{@product.data}", :class => 'call_to_action'} Data Sheet
+          %a{:href => "#{@product.data}", :class => 'call_to_action'} Tech Data Sheet
       - unless @product.msds.path.nil?
         %li
           %a{:href => "#{@product.msds}", :class => 'call_to_action'} MSDS Sheet

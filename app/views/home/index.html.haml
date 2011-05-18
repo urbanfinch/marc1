@@ -14,5 +14,14 @@
     %p Governmental entities will find an extensive, quality line of vehicle, heavy machinery and shop related maintenance products
   .third
     %h2 Featured Product
-    %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus dui nec urna consequat sed pharetra eros commodo. Donec pharetra fermentum varius. In diam turpis, fermentum id semper vel, fermentum id nisi. Vestibulum tristique risus in elit semper feugiat. Etiam vel metus neque. Mauris nunc nunc, aliquam at sodales ut, rutrum quis purus. Duis et eros nisl, sit amet posuere lacus. Nunc non sollicitudin ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fringilla, ligula non faucibus tristique, nisi tortor faucibus lorem, sit amet accumsan sem massa nec neque. Suspendisse potenti. Aliquam eleifend mattis nunc tincidunt aliquam. Vivamus eros dolor, aliquet eget tincidunt non, tempor vel nisi. Morbi tincidunt, odio sit amet porttitor posuere, tortor justo convallis quam, nec mattis tellus enim sed odio.
+    %div{:id => 'featured'}
+      - unless @featured_product.nil?
+        %img{:src => "#{@featured_product.image.path.nil? ? '/images/missing.png' : @featured_product.image(:thumb)}", :alt => 'MARC Product'}
+        %h2= @featured_product.title
+        %h3= @featured_product.sku
+        %p= @featured_product.description.truncate(400)
+        %p
+          %a{:href => "/categories/#{@featured_product.category.id}/products/#{@featured_product.id}"} View Product Page
+      - else
+        %p Featured product not found.
   .clear
