@@ -36,7 +36,7 @@
             %li
               %a{:href => '/home', :class => "#{'selected' if current_page?(:controller => 'home', :action => 'index')}"} Home
             %li
-              %a{:href => '/categories', :class => "#{'selected' if current_controller?('categories') || current_controller?('products')}"} Products
+              %a{:href => '/categories', :class => "#{'selected' if current_page?(:controller => 'categories') || controller_name == 'products'}"} Products
             %li
               %a{:href => '/about', :class => "#{'selected' if current_page?(:controller => 'about', :action => 'index')}"} About Us
             %li

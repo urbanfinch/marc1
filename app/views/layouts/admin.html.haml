@@ -27,9 +27,9 @@
           %nav
             %ul
               %li
-                %a{:href => '/admin/products', :class => "#{'selected' if current_controller?('products')}"} Products
+                %a{:href => '/admin/products', :class => "#{'selected' if current_page?(:controller => 'products')}"} Products
               %li
-                %a{:href => '/admin/categories', :class => "#{'selected' if current_controller?('categories')}"} Categories
+                %a{:href => '/admin/categories', :class => "#{'selected' if current_page?(:controller => 'categories')}"} Categories
         %hr
     %section
       .container
