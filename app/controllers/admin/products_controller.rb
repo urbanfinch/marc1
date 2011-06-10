@@ -2,7 +2,7 @@ class Admin::ProductsController < AdminController
   before_filter :authenticate
   
   def index
-    @products = Product.all
+    @products = Product.order('title ASC')
   end
   
   def new

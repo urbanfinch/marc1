@@ -13,7 +13,7 @@
         %a{:href => "/categories/#{params[:category_id]}/products"}= @category.title unless @category.nil?
     %h2 Products
     %ul{:class => 'products'}
-      - @category.products.where(:active => true).each do |product|
+      - @products.each do |product|
         %li
           %a{:href => "/categories/#{params[:category_id]}/products/#{product.id}", :'data-image-url' => product.image(:medium)}= product.title
   .clear

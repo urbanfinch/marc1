@@ -2,7 +2,7 @@ class Admin::CategoriesController < AdminController
   before_filter :authenticate
   
   def index
-    @categories = Category.all
+    @categories = Category.order('title ASC')
   end
   
   def new
