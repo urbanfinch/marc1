@@ -1,7 +1,7 @@
 require 'postageapp/mailer'
 
 class ContactMailer < PostageApp::Mailer
-  default :to => "researchmidamerican@gmail.com"
+  default :to => "marc1@marc1.com"
   
   def contact(contact)
     @contact = contact
