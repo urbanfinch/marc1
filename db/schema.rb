@@ -10,7 +10,23 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110518162924) do
+ActiveRecord::Schema.define(:version => 20110915064456) do
+
+  create_table "applications", :force => true do |t|
+    t.string   "name"
+    t.string   "address"
+    t.string   "email"
+    t.string   "home_phone"
+    t.string   "work_phone"
+    t.string   "experience"
+    t.string   "resume_file_name"
+    t.integer  "resume_file_size"
+    t.string   "resume_content_type"
+    t.datetime "resume_updated_at"
+    t.boolean  "active",              :default => true, :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "categories", :force => true do |t|
     t.string   "title"
