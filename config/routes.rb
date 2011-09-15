@@ -1,13 +1,15 @@
 Marc::Application.routes.draw do
   
-  match 'home' => 'home#index'
-  match 'about' => 'about#index'
-  match 'how' => 'how#index'
-  match 'careers' => 'careers#index'
+  get 'home' => 'home#index'
+  get 'about' => 'about#index'
+  get 'how' => 'how#index'
+  get 'careers' => 'careers#index'
+  get 'careers/apply' => 'careers#apply'
+  post 'careers/apply' => 'careers#create', :as => 'new_application'
   get 'contact' => 'contact#index'
   post 'contact' => 'contact#create', :as => 'new_contact'
-  match 'retail' => 'retail#index'
-  match 'search' => 'search#index'
+  get 'retail' => 'retail#index'
+  get 'search' => 'search#index'
   
   resources :categories, :only => [:index] do
     resources :products, :only => [:index, :show]

@@ -1,0 +1,52 @@
+%div{:id => 'careers_apply'}
+  .half
+    %h2 Would you like to apply for a position at MARC?
+    %p Please fill out the form on this page and attach your resume to begin the application process.
+    %p
+      If you have any questions you can call us at:
+      %br
+      %br
+      %span{:class => 'phone'} Toll Free 800.228.8508
+      %span{:class => 'phone'} 402.564.7104
+      %span{:class => 'phone'} 402.563.1290
+    %h2 Looking for our printable application?
+    %p If applying in person please fill out the application linked below and return to MARC.
+    %ul{:class => 'links'}
+      %li
+        %a{:href => '/documents/application.pdf', :class => 'call_to_action'} View PDF Application
+  .half
+    = form_for :application, :url => new_application_path, :html => {:multipart => true, :class => 'application'} do |f|
+      - if flash[:notice]
+        %div{:id => 'flash'}= flash[:notice]
+      - if @application.errors.any?
+        %div{:id => 'errors'}
+          %p There was an error sending the application:
+          %ul
+            - @application.errors.full_messages.each do |message|
+              %li= message
+      %ul
+        %li
+          = f.label :name
+          = f.text_field :name
+        %li
+          = f.label :address
+          = f.text_field :address
+        %li
+          %span
+            = f.label :email
+            = f.text_field :email
+          %span
+            = f.label :home_phone
+            = f.text_field :home_phone
+          %span
+            = f.label :work_phone
+            = f.text_field :work_phone
+        %li
+          = f.label :experience, "Please List Any Sales Experience"
+          = f.text_area :experience, :cols => 50, :rows => 3
+        %li
+          = f.label :resume
+          = f.file_field :resume
+        %li
+          = f.submit :send, :value => "Send"
+  .clear

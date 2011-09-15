@@ -452,6 +452,58 @@ div#careers ul#brochures li {
   margin-right: 10px;
 }
 
+/* line 2, ../../app/stylesheets/_careers_apply.sass */
+div#careers_apply .half:first-child {
+  width: 460px;
+  padding-right: 20px;
+}
+/* line 6, ../../app/stylesheets/_careers_apply.sass */
+div#careers_apply span.phone {
+  display: block;
+  padding: 5px 0px;
+  color: #36379c;
+}
+/* line 11, ../../app/stylesheets/_careers_apply.sass */
+div#careers_apply ul.links {
+  margin-top: 40px;
+}
+/* line 14, ../../app/stylesheets/_careers_apply.sass */
+div#careers_apply ul.links li {
+  display: inline;
+  margin-right: 10px;
+}
+/* line 21, ../../app/stylesheets/_careers_apply.sass */
+div#careers_apply form.application ul > li input[type=text],
+div#careers_apply form.application ul > li textarea {
+  width: 445px;
+  max-width: 445px;
+}
+/* line 26, ../../app/stylesheets/_careers_apply.sass */
+div#careers_apply form.application ul > li:last-child {
+  margin-bottom: 0px;
+}
+/* line 29, ../../app/stylesheets/_careers_apply.sass */
+div#careers_apply form.application ul > li textarea {
+  height: 120px;
+}
+/* line 32, ../../app/stylesheets/_careers_apply.sass */
+div#careers_apply form.application ul > li span {
+  float: left;
+}
+/* line 35, ../../app/stylesheets/_careers_apply.sass */
+div#careers_apply form.application ul > li span input[type=text] {
+  width: 133px;
+  margin-bottom: 10px;
+}
+/* line 39, ../../app/stylesheets/_careers_apply.sass */
+div#careers_apply form.application ul > li span:first-child {
+  margin-right: 9px;
+}
+/* line 42, ../../app/stylesheets/_careers_apply.sass */
+div#careers_apply form.application ul > li span:last-child {
+  margin-left: 9px;
+}
+
 /* line 2, ../../app/stylesheets/_contact.sass */
 div#contact .half:first-child {
   width: 460px;
