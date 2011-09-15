@@ -1,7 +1,7 @@
 require 'postageapp/mailer'
 
 class ApplicationMailer < PostageApp::Mailer
-  default :to => "acwrightdesign@gmail.com"
+  default :to => "marc1@marc1.com"
   
   def application(application)
     @application = application
