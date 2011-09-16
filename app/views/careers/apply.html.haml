@@ -7,8 +7,8 @@
       %br
       %br
       %span{:class => 'phone'} Toll Free 800.228.8508
-      %span{:class => 'phone'} 402.564.7104
-      %span{:class => 'phone'} 402.563.1290
+      %span{:class => 'phone'} Tel 402.564.7104
+      %span{:class => 'phone'} Fax 402.563.1290
     %h2 Looking for our printable application?
     %p If applying in person please fill out the application linked below and return to MARC.
     %ul{:class => 'links'}
@@ -41,6 +41,9 @@
           %span
             = f.label :work_phone
             = f.text_field :work_phone
+        %li
+          = f.label :state, "Which State Are You Interested In Selling In?"
+          = f.text_field :state
         %li
           = f.label :experience, "Please List Any Sales Experience"
           = f.text_area :experience, :cols => 50, :rows => 3
