@@ -24,6 +24,17 @@
           %ul
             - @application.errors.full_messages.each do |message|
               %li= message
+      - if flash[:success]
+        / Begin INDEED conversion code
+        :javascript
+          /*  */
+          var indeed_conversion_id = '7390527581151541';
+          var indeed_conversion_label = '';
+          /*  */
+        %script{:src => "http://conv.indeed.com/pagead/conversion.js", :type => "text/javascript"}
+        %noscript
+          %img{:border => "0", :height => "1", :src => "http://conv.indeed.com/pagead/conv/7390527581151541/?script=0", :width => "1"}
+        / End INDEED conversion code
       %ul
         %li
           = f.label :name

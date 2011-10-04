@@ -15,7 +15,7 @@ class CareersController < ApplicationController
     respond_to do |format|
       if @application.valid?
         @mailer.deliver
-        format.html { redirect_to careers_apply_url, :notice => "Thanks! Your application has been delivered!"}
+        format.html { redirect_to careers_apply_url, :flash => { :notice => "Thanks! Your application has been delivered!", :success => true }}
       else
         format.html { render :controller => 'careers', :action => 'apply' }
       end
