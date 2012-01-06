@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110916182916) do
+ActiveRecord::Schema.define(:version => 20120106174415) do
 
   create_table "applications", :force => true do |t|
     t.string   "name"
@@ -42,7 +42,7 @@ ActiveRecord::Schema.define(:version => 20110916182916) do
   create_table "products", :force => true do |t|
     t.integer  "category_id"
     t.string   "title"
-    t.string   "description"
+    t.text     "description",        :limit => 255
     t.string   "sku"
     t.string   "sizes"
     t.string   "image_file_name"
@@ -61,7 +61,7 @@ ActiveRecord::Schema.define(:version => 20110916182916) do
     t.integer  "label_file_size"
     t.string   "label_content_type"
     t.datetime "label_updated_at"
-    t.boolean  "active",             :default => true, :null => false
+    t.boolean  "active",                            :default => true, :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "featured"
