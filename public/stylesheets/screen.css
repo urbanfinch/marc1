@@ -1,66 +1,70 @@
-@charset "UTF-8";
 /* Welcome to Compass.
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 14, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 17, ../../../../../.rvm/gems/ruby-1.8.7-p352@marc/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
-del, dfn, em, font, img, ins, kbd, q, s, samp,
+del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td {
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
-  outline: 0;
-  font-weight: inherit;
-  font-style: inherit;
   font-size: 100%;
-  font-family: inherit;
+  font: inherit;
   vertical-align: baseline;
 }
 
-/* line 17, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 20, ../../../../../.rvm/gems/ruby-1.8.7-p352@marc/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 body {
   line-height: 1;
-  color: black;
-  background: white;
 }
 
-/* line 19, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../.rvm/gems/ruby-1.8.7-p352@marc/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 21, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../.rvm/gems/ruby-1.8.7-p352@marc/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
-  border-collapse: separate;
+  border-collapse: collapse;
   border-spacing: 0;
-  vertical-align: middle;
 }
 
-/* line 23, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../.rvm/gems/ruby-1.8.7-p352@marc/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 25, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../.rvm/gems/ruby-1.8.7-p352@marc/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
-  quotes: "" "";
+  quotes: none;
 }
-/* line 96, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 101, ../../../../../.rvm/gems/ruby-1.8.7-p352@marc/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
+  content: none;
 }
 
-/* line 27, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../.rvm/gems/ruby-1.8.7-p352@marc/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
+}
+
+/* line 114, ../../../../../.rvm/gems/ruby-1.8.7-p352@marc/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
 }
 
 /* Colors */
@@ -140,7 +144,7 @@ p {
 a {
   color: black;
 }
-/* line 24, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/utilities/links/_link-colors.scss */
+/* line 24, ../../../../../.rvm/gems/ruby-1.8.7-p352@marc/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
 a:hover {
   color: #36379c;
 }
@@ -159,21 +163,27 @@ a.call_to_action {
   -ms-border-radius: 10px;
   -khtml-border-radius: 10px;
   border-radius: 10px;
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #36379c), color-stop(100%, #30318c));
-  background-image: -moz-linear-gradient(top, #36379c 0%, #30318c 100%);
-  background-image: linear-gradient(top, #36379c 0%, #30318c 100%);
-  text-shadow: black 1px 1px 1px;
-  -moz-box-shadow: black 1px 1px 2px 0;
-  -webkit-box-shadow: black 1px 1px 2px 0;
-  -o-box-shadow: black 1px 1px 2px 0;
-  box-shadow: black 1px 1px 2px 0;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #36379c), color-stop(100%, #30318c));
+  background-image: -webkit-linear-gradient(top, #36379c, #30318c);
+  background-image: -moz-linear-gradient(top, #36379c, #30318c);
+  background-image: -o-linear-gradient(top, #36379c, #30318c);
+  background-image: -ms-linear-gradient(top, #36379c, #30318c);
+  background-image: linear-gradient(top, #36379c, #30318c);
+  text-shadow: black;
+  -moz-box-shadow: 1px 1px 2px black;
+  -webkit-box-shadow: 1px 1px 2px black;
+  -o-box-shadow: 1px 1px 2px black;
+  box-shadow: 1px 1px 2px black;
 }
 /* line 46, ../../app/stylesheets/_common.sass */
 a.call_to_action:hover {
   color: white;
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #30318c), color-stop(100%, #36379c));
-  background-image: -moz-linear-gradient(top, #30318c 0%, #36379c 100%);
-  background-image: linear-gradient(top, #30318c 0%, #36379c 100%);
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #30318c), color-stop(100%, #36379c));
+  background-image: -webkit-linear-gradient(top, #30318c, #36379c);
+  background-image: -moz-linear-gradient(top, #30318c, #36379c);
+  background-image: -o-linear-gradient(top, #30318c, #36379c);
+  background-image: -ms-linear-gradient(top, #30318c, #36379c);
+  background-image: linear-gradient(top, #30318c, #36379c);
 }
 
 /* line 50, ../../app/stylesheets/_common.sass */
@@ -276,7 +286,7 @@ footer {
   border-top: 5px black solid;
   padding: 10px 0px;
   font-size: 10px;
-  text-shadow: #e0e0e0 1px 1px 1px;
+  text-shadow: #e0e0e0;
 }
 /* line 136, ../../app/stylesheets/_common.sass */
 footer p#copyright {
@@ -296,10 +306,13 @@ form {
   -ms-border-radius: 10px;
   -khtml-border-radius: 10px;
   border-radius: 10px;
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #cecece), color-stop(100%, #afafaf));
-  background-image: -moz-linear-gradient(top, #cecece 0%, #afafaf 100%);
-  background-image: linear-gradient(top, #cecece 0%, #afafaf 100%);
-  text-shadow: #e0e0e0 1px 1px 1px;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #cecece), color-stop(100%, #afafaf));
+  background-image: -webkit-linear-gradient(top, #cecece, #afafaf);
+  background-image: -moz-linear-gradient(top, #cecece, #afafaf);
+  background-image: -o-linear-gradient(top, #cecece, #afafaf);
+  background-image: -ms-linear-gradient(top, #cecece, #afafaf);
+  background-image: linear-gradient(top, #cecece, #afafaf);
+  text-shadow: #e0e0e0;
 }
 /* line 149, ../../app/stylesheets/_common.sass */
 form div#flash,
@@ -633,10 +646,13 @@ ul#user {
   -ms-border-radius: 10px;
   -khtml-border-radius: 10px;
   border-radius: 10px;
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #cecece), color-stop(100%, #afafaf));
-  background-image: -moz-linear-gradient(top, #cecece 0%, #afafaf 100%);
-  background-image: linear-gradient(top, #cecece 0%, #afafaf 100%);
-  text-shadow: #e0e0e0 1px 1px 1px;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #cecece), color-stop(100%, #afafaf));
+  background-image: -webkit-linear-gradient(top, #cecece, #afafaf);
+  background-image: -moz-linear-gradient(top, #cecece, #afafaf);
+  background-image: -o-linear-gradient(top, #cecece, #afafaf);
+  background-image: -ms-linear-gradient(top, #cecece, #afafaf);
+  background-image: linear-gradient(top, #cecece, #afafaf);
+  text-shadow: #e0e0e0;
 }
 /* line 11, ../../app/stylesheets/_admin.sass */
 ul#user li {
