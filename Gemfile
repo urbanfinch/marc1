@@ -17,7 +17,7 @@ gem 'postageapp'
 gem 'bcrypt-ruby', :require => 'bcrypt'
 
 group :production do
-  gem 'aws-sdk'
+  gem 'aws-s3', :require => 'aws/s3'
 end
 
 group :development, :test do
