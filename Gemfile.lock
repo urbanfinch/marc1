@@ -99,7 +99,7 @@ GEM
     mime-types (1.17.2)
     multi_json (1.0.4)
     nokogiri (1.5.0)
-    paperclip (2.5.2)
+    paperclip (2.4.1)
       activerecord (>= 2.3.0)
       activesupport (>= 2.3.2)
       cocaine (>= 0.0.2)
@@ -174,7 +174,7 @@ DEPENDENCIES
   jquery-rails
   launchy
   meta_search
-  paperclip
+  paperclip (= 2.4.1)
   postageapp
   rails (= 3.0.5)
   rspec

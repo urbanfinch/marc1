@@ -12,7 +12,7 @@ gem 'jquery-rails'
 gem 'compass'
 gem 'meta_search'
 gem 'will_paginate', '~> 3.0.pre2'
-gem 'paperclip'
+gem 'paperclip', '2.4.1'
 gem 'postageapp'
 gem 'bcrypt-ruby', :require => 'bcrypt'
 
