@@ -450,16 +450,20 @@ div#how a.article {
 }
 
 /* line 2, ../../app/stylesheets/_careers.sass */
+div#careers .two_third {
+  margin-bottom: 20px;
+}
+/* line 5, ../../app/stylesheets/_careers.sass */
 div#careers img.careers {
   width: 320px;
   height: 440px;
   background-color: #cecece;
 }
-/* line 7, ../../app/stylesheets/_careers.sass */
+/* line 10, ../../app/stylesheets/_careers.sass */
 div#careers ul#brochures {
   margin-top: 40px;
 }
-/* line 10, ../../app/stylesheets/_careers.sass */
+/* line 13, ../../app/stylesheets/_careers.sass */
 div#careers ul#brochures li {
   display: inline;
   margin-right: 10px;
