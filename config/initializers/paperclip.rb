@@ -1,2 +1,2 @@
 #Paperclip::Attachment.default_options[:url] = ':s3_domain_url'
-Paperclip::Attachment.default_options[:path] = '/app/public/:attachment/:id_partition/:style/:filename'
+Paperclip::Attachment.default_options[:path] = '/app/public/:attachment/:style/:filename'
