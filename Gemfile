@@ -6,7 +6,6 @@ gem 'rails', '~> 3.2'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
 gem 'haml'
 gem 'haml-rails'
 gem 'jquery-rails'
@@ -15,6 +14,10 @@ gem 'will_paginate', '~> 3.0'
 gem 'paperclip', '~> 2.5'
 gem 'postageapp'
 gem 'bcrypt-ruby', :require => 'bcrypt'
+
+group :development do
+  gem 'sqlite3'
+end
 
 group :production do
   gem 'aws-s3', :require => 'aws/s3'
