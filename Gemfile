@@ -14,6 +14,7 @@ gem 'will_paginate', '~> 3.0'
 gem 'paperclip', '~> 2.5'
 gem 'postageapp'
 gem 'bcrypt-ruby', :require => 'bcrypt'
+gem 'sass-rails'
 
 group :development do
   gem 'sqlite3'
