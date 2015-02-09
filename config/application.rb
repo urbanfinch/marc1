@@ -39,6 +39,7 @@ module Marc
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
     
+    # Don't initialize on precompile
     config.assets.initialize_on_precompile = false
   end
 end
