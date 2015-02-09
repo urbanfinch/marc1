@@ -18,6 +18,7 @@ gem 'bcrypt-ruby', :require => 'bcrypt'
 
 group :production do
   gem 'aws-s3', :require => 'aws/s3'
+  gem 'pg'
 end
 
 group :test do
@@ -31,7 +32,7 @@ group :test do
 end
 
 # Use unicorn as the web server
-# gem 'unicorn'
+gem 'unicorn'
 
 # Deploy with Capistrano
 # gem 'capistrano'
