@@ -21,7 +21,7 @@ group :development do
 end
 
 group :production do
-  gem 'aws-sdk'
+  gem 'aws-s3'
   gem 'pg'
 end
 
