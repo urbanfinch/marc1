@@ -4,6 +4,7 @@ class Product < ActiveRecord::Base
   has_attached_file       :data, { :default_url => '/documents/missing.pdf' }
   has_attached_file       :msds, { :default_url => '/documents/missing.pdf' }
   has_attached_file       :label, { :default_url => '/documents/missing.pdf' }
+  do_not_validate_attachment_file_type :image, :data, :msds, :label
   
   belongs_to :category
   
