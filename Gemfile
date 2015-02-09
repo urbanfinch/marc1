@@ -1,6 +1,7 @@
-source 'http://rubygems.org'
+source 'https://rubygems.org'
+ruby '1.9.3'
 
-gem 'rails', '3.0.19'
+gem 'rails', '~> 3.2'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -9,10 +10,9 @@ gem 'sqlite3'
 gem 'haml'
 gem 'haml-rails'
 gem 'jquery-rails'
-gem 'compass'
 gem 'meta_search'
-gem 'will_paginate', '~> 3.0.pre2'
-gem 'paperclip', '2.4.1'
+gem 'will_paginate', '~> 3.0'
+gem 'paperclip', '~> 2.5'
 gem 'postageapp'
 gem 'bcrypt-ruby', :require => 'bcrypt'
 
@@ -20,7 +20,7 @@ group :production do
   gem 'aws-s3', :require => 'aws/s3'
 end
 
-group :development, :test do
+group :test do
   gem 'cucumber'
   gem 'cucumber-rails'
   gem 'capybara'

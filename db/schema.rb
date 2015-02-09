@@ -24,8 +24,8 @@ ActiveRecord::Schema.define(:version => 20120106174415) do
     t.string   "resume_content_type"
     t.datetime "resume_updated_at"
     t.boolean  "active",              :default => true, :null => false
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                            :null => false
+    t.datetime "updated_at",                            :null => false
     t.string   "state"
   end
 
@@ -35,8 +35,8 @@ ActiveRecord::Schema.define(:version => 20120106174415) do
     t.integer  "image_file_size"
     t.string   "image_content_type"
     t.datetime "image_updated_at"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
   end
 
   create_table "products", :force => true do |t|
@@ -62,8 +62,8 @@ ActiveRecord::Schema.define(:version => 20120106174415) do
     t.string   "label_content_type"
     t.datetime "label_updated_at"
     t.boolean  "active",                            :default => true, :null => false
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                                          :null => false
+    t.datetime "updated_at",                                          :null => false
     t.boolean  "featured"
   end
 
@@ -72,8 +72,8 @@ ActiveRecord::Schema.define(:version => 20120106174415) do
     t.string   "password_hash"
     t.string   "password_salt"
     t.boolean  "active",        :default => true, :null => false
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                      :null => false
+    t.datetime "updated_at",                      :null => false
   end
 
 end
