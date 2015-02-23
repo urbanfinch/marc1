@@ -14,6 +14,16 @@
       Find out more on our
       %a{:href => '/careers'} career opportunities 
       page!
+    %h2 Retailers
+    %p
+      %ul{:id => 'retailers'}
+        %li
+          %a{:href => '/retailer'} Find a retailer in your area
+    %h2 Sales Reps
+    %p
+      %ul{:id => 'sales_reps'}
+        %li
+          %a{:href => '/salesrep'} Find a sales rep in your area
   .half
     = form_for :contact, :url => new_contact_path, :html => {:class => 'contact'} do |f|
       - if flash[:notice]

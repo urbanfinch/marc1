@@ -15,7 +15,7 @@
   .third
     %h2 Featured Product
     %div{:id => 'featured'}
-      - unless @featured_product.nil?
+      - if @featured_product
         %img{:src => "#{@featured_product.image.path.nil? ? '/images/missing.png' : @featured_product.image(:thumb)}", :alt => 'MARC Product'}
         %h2= @featured_product.title
         %h3= @featured_product.sku

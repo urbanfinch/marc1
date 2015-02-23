@@ -15,6 +15,7 @@ gem 'paperclip', '~> 4.2'
 gem 'postageapp'
 gem 'bcrypt-ruby', :require => 'bcrypt'
 gem 'sass-rails'
+gem 'youtube_addy'
 
 group :development do
   gem 'sqlite3'

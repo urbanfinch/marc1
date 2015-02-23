@@ -1,0 +1,12 @@
+%div{:id => 'rep'}
+  %ul{:class => 'breadcrumb'}
+    %li
+      %a{:href => '/'} MARC
+    %li >>
+    %li
+      %a{:href => '/salesrep'} Sales Reps
+  %h2 Sales Reps
+  / - @search.each do |product|
+  /   %p
+  /     %a{:href => "/categories/#{product.category_id}/products/#{product.id}", :class => 'name'}= product.title
+  /     = product.description
