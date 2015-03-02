@@ -10,8 +10,6 @@ Marc::Application.routes.draw do
   post 'contact' => 'contact#create', :as => 'new_contact'
   get 'retail' => 'retail#index'
   get 'search' => 'search#index'
-  get 'retailer' => 'retailer#index'
-  get 'salesrep' => 'rep#index'
   
   resources :categories, :only => [:index] do
     resources :products, :only => [:index, :show]

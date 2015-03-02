@@ -9,11 +9,10 @@
       %span{:class => 'phone'} Toll Free 800.228.8508
       %span{:class => 'phone'} Tel 402.564.7104
       %span{:class => 'phone'} Fax 402.563.1290
-    %h2 Looking for our printable application?
-    %p If applying in person please fill out the application linked below and return to MARC.
+    %h2 Apply Online
     %ul{:class => 'links'}
       %li
-        %a{:href => '/documents/application.pdf', :class => 'call_to_action'} View PDF Application
+        %a{:href => '', :class => 'call_to_action'} Apply Online Now!
   .half
     = form_for :application, :url => new_application_path, :html => {:multipart => true, :class => 'application'} do |f|
       - if flash[:notice]
