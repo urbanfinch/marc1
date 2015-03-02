@@ -621,6 +621,7 @@ div#product img.product {
 /* line 7, ../../app/stylesheets/_product.sass */
 div#product ul#brochures {
   margin-top: 40px;
+  margin-bottom: 20px;
 }
 /* line 10, ../../app/stylesheets/_product.sass */
 div#product ul#brochures li {
