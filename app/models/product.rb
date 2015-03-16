@@ -1,5 +1,5 @@
 class Product < ActiveRecord::Base
-  validates_presence_of   :title, :description, :sku, :video_url
+  validates_presence_of   :title, :description, :sku
   has_attached_file       :image, { :default_url => '/images/missing.png', :styles => { :medium => "320x440#", :thumb => "80x110#" }}
   has_attached_file       :data, { :default_url => '/documents/missing.pdf' }
   has_attached_file       :msds, { :default_url => '/documents/missing.pdf' }
