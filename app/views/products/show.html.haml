@@ -18,7 +18,7 @@
     %h3= @product.sku
     %p= @product.description
     %p= @product.sizes
-    - if @product.video_url
+    - unless @product.video_url.nil?
       %p!= YouTubeAddy.youtube_embed_url(@product.video_url, 420, 315)
     %ul{:id => 'brochures'}
       - unless @product.data.path.nil?
