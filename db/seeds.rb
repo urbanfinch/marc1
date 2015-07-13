@@ -7,19 +7,19 @@
 #   Mayor.create(:name => 'Daley', :city => cities.first)
 
 unless Rails.env.production?
-  
-  user = Factory.create(:user, :email => 'example@example.com')
-  
+
+  user = FactoryGirl.create(:user, :email => 'example@example.com')
+
   (1..10).each do
-    category = Factory.create(:category)
-    
+    category = FactoryGirl.create(:category)
+
     (1..10).each do
-      product = Factory.create(:product, :category => category)
+      product = FactoryGirl.create(:product, :category => category)
     end
   end
-  
+
 else
-  
-  user = Factory.create(:user, :email => 'example@example.com')
-  
+
+  user = FactoryGirl.create(:user, :email => 'example@example.com')
+
 end

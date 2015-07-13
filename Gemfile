@@ -16,6 +16,7 @@ gem 'postageapp'
 gem 'bcrypt-ruby', :require => 'bcrypt'
 gem 'sass-rails'
 gem 'youtube_addy'
+gem 'factory_girl_rails'
 
 group :development do
   gem 'sqlite3'
@@ -33,7 +34,6 @@ group :test do
   gem 'rspec'
   gem 'rspec-rails'
   gem 'launchy'
-  gem 'factory_girl_rails'
 end
 
 # Use unicorn as the web server

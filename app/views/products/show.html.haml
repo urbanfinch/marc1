@@ -26,7 +26,7 @@
           %a{:href => "#{@product.data}", :class => 'call_to_action'} Tech Data Sheet
       - unless @product.msds.path.nil?
         %li
-          %a{:href => "#{@product.msds}", :class => 'call_to_action'} MSDS Sheet
+          %a{:href => "#{@product.msds}", :class => 'call_to_action'} SDS Sheet
       - unless @product.label.path.nil?
         %li
           %a{:href => "#{@product.label}", :class => 'call_to_action'} Sample Label

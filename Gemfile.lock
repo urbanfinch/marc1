@@ -210,3 +210,6 @@ DEPENDENCIES
   unicorn
   will_paginate (~> 3.0)
   youtube_addy
+
+BUNDLED WITH
+   1.10.5
