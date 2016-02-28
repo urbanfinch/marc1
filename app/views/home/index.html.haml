@@ -3,7 +3,7 @@
   .third
     %h2 Mission Statement
     %p MARC is a specialty chemical manufacturing company that strives to produce innovative,environmentally responsible, economical and quality maintenance products with superior customer service
-    %p We will do this through the continued research and development of innovative chemical solutions. 
+    %p We will do this through the continued research and development of innovative chemical solutions.
     %p In the pursuit of our mission, we will strive to attract, develop, retain and reward the best people in our industry.
   .third
     %h2 Who We Are
@@ -24,4 +24,7 @@
           %a{:href => "/categories/#{@featured_product.category.id}/products/#{@featured_product.id}"} View Product Page
       - else
         %p Featured product not found.
+    %h2 YouTube Channel
+    %p
+      %a{:href => 'https://www.youtube.com/channel/UCVzci06BDgzvCDlxB5ZEEew', :class => 'call_to_action', :style => 'display: inline-block;'} VIDEOS
   .clear

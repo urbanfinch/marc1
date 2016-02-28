@@ -40,7 +40,7 @@
       - unless @product.id.nil?
         = link_to @product.data, @product.data.url
     %li
-      = f.label :msds, "MSDS Sheet"
+      = f.label :msds, "SDS Sheet"
       = f.file_field :msds
       - unless @product.id.nil?
         = link_to @product.msds, @product.msds.url
