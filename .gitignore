@@ -5,3 +5,4 @@ tmp/
 public/system/*/**
 .DS_Store.env
 .env
+.sass-cache

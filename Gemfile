@@ -20,6 +20,7 @@ gem 'factory_girl_rails'
 
 group :development do
   gem 'sqlite3'
+  gem 'compass'
 end
 
 group :production do

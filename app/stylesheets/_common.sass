@@ -12,25 +12,25 @@ hr
   height: 5px
   background-color: $black
   margin-bottom: 0px
-  
+
 h2
   margin-bottom: 10px
   font-size: 18px
   font-weight: bold
   color: $blue
-  
+
 h3
   margin-bottom: 10px
   font-size: 14px
   font-weight: bold
   color: $gray
-  
+
 p
   margin-bottom: 10px
-  
+
 a
   +link-colors($black, $blue)
-  
+
 a.call_to_action
   padding: 20px
   text-decoration: none
@@ -39,43 +39,43 @@ a.call_to_action
   font-weight: bold
   color: $white
   @include border-radius(10px)
-  @include linear-gradient(color-stops($blue, $blue * .9))
+  @include background-image(linear-gradient(color-stops($blue, $blue * .9)))
   @include text-shadow($black * .2)
   @include box-shadow($black, 1px, 1px, 2px)
-  
+
   &:hover
     color: $white
-    @include linear-gradient(color-stops($blue * .9, $blue))
-    
+    @include background-image(linear-gradient(color-stops($blue * .9, $blue)))
+
 table
   width: 100%
   border: 5px $black solid
-  
+
   thead
     tr
       background-color: $black
       color: $white
-      
+
       th
         padding: 10px
-      
+
   tbody
     tr:nth-child(even)
       background-color: $gray
-    
+
     tr:nth-child(odd)
       background-color: $gray * 1.5
-        
+
     tr
       td
         padding: 10px
-  
+
 header
   display: block
   width: 100%
   padding-top: 20px
   background-color: $white
-  
+
   div.container
     position: relative
 
@@ -86,28 +86,28 @@ header
       height: 55px
       text-indent: -9999px
       background-image: url('/images/logo.png')
-  
+
   nav
     display: block
-    
+
     ul
       margin: 5px 0px
-      
+
       li
         display: inline
         margin-right: 10px
-        
+
         a
           font-size: 16px
           font-weight: bold
           text-transform: uppercase
           text-decoration: none
           color: $black
-          
+
           &:hover,
           &.selected
             color: $blue
-        
+
   form.search
     position: absolute
     top: 0px
@@ -117,13 +117,13 @@ header
 
     input
       width: 286px
-  
+
 section
   display: block
   width: 100%
   background-color: $white
   padding: 20px 0px
-  
+
 footer
   display: block
   background-color: $gray
@@ -132,64 +132,64 @@ footer
   padding: 10px 0px
   font-size: 10px
   @include text-shadow($white * .88)
-  
+
   p#copyright
     width: 940px
     margin: 0px auto
     margin-bottom: 10px
     text-align: center
-    
+
 form
   padding: 10px
   background-color: $gray
   @include border-radius(10px)
-  @include linear-gradient(color-stops($gray, $gray * .85))
+  @include background-image(linear-gradient(color-stops($gray, $gray * .85)))
   @include text-shadow($white * .88)
-  
+
   div#flash,
   div#errors
     margin-bottom: 10px
     padding: 10px
     background-color: $gray * 1.1
     @include border-radius(10px)
-    
+
     p
       font-weight: bold
-      
+
     ul
       li
         margin-bottom: 5px
         list-style-position: inside
         list-style-type: square
-        
+
   ul
     clear: both
-    
+
     > li
       display: block
       margin-bottom: 10px
-      
+
       &:last-child
         margin-bottom: 0px
-        
+
       img
         border: 1px ($gray * .75) solid
-        
+
       a
         display: block
         margin: 10px 0px
-        
+
       div.field_with_errors
         input[type=text],
         textarea
           border: 1px $blue solid
-      
+
   label
     display: block
     font-weight: bold
     text-transform: uppercase
     margin-bottom: 5px
-    
+
   input[type=text],
   input[type=password],
   input[type=file],
@@ -198,18 +198,18 @@ form
     border: 1px ($gray * .75) solid
     font-size: 14px
     outline: none
-    
+
 ul.breadcrumb
   margin-bottom: 10px
-  
+
   li
     display: inline
-    
+
     a
       font-size: 12px
       font-weight: bold
       text-decoration: none
       color: $black
-      
+
       &:hover
         color: $blue
