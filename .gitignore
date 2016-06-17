@@ -3,6 +3,6 @@ db/*.sqlite3
 log/*.log
 tmp/
 public/system/*/**
-.DS_Store.env
+.DS_Store
 .env
 .sass-cache
